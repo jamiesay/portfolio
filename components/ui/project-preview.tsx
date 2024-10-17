@@ -1,14 +1,16 @@
 import * as React from "react";
 import { motion, useScroll } from "framer-motion";
+import Link from 'next/link';
 
 import Arrow from "@/public/assets/icons/arrow.svg";
 
 interface ProjectPreviewProps {
-  name?: string | undefined;
-  description?: string | undefined;
-  imageUrl?: string | undefined;
-  bgColor?: string | undefined;
-  dark?: boolean | undefined;
+  name: string;
+  description: string;
+  imageUrl: string;
+  bgColor?: string;
+  dark?: boolean;
+  link: string;
 }
 
 const PreviewAnimation = {
@@ -29,37 +31,39 @@ const PreviewAnimation = {
 };
 
 const ProjectPreview: React.FC<ProjectPreviewProps> = ({
-  name = "Project Name",
-  description = "Project Description",
-  imageUrl = "/assets/project-1.png",
-  bgColor = "#e4e4e7",
-  dark = "false",
+  name,
+  description,
+  imageUrl,
+  bgColor,
+  dark,
+  link,
 }) => {
   return (
-    <div
-      className={`h-[30rem] rounded-3xl overflow-hidden ${dark ? "dark" : ""}`}
-      style={{ background: `${bgColor}` }}
-      // initial="initial"
-      // whileInView="animate"
-      // variants={PreviewAnimation}
-    >
+    <Link href={link} className="block">
       <div
-        className={`h-full w-full px-10 py-6 duration-[500ms] hover:scale-105 bg-cover bg-no-repeat bg-center transition-all ease-in-out`}
-        style={{ backgroundImage: `url('${imageUrl}')` }}
+        className={`relative h-[400px] w-full overflow-hidden rounded-3xl p-6 ${
+          dark ? 'text-white' : ''
+        }`}
+        style={{ backgroundColor: bgColor }}
       >
-        <div className="flex justify-between">
-          <div>
-            <h2 className="text-lg font-medium dark:text-white">{name}</h2>
-            <p className="text-sm text-zinc-500 dark:text-zinc-300">
-              {description}
-            </p>
-          </div>
-          <div className="flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer">
-            <Arrow className="w-6 h-6" />
+        <div
+          className={`h-full w-full px-10 py-6 duration-[500ms] hover:scale-105 bg-cover bg-no-repeat bg-center transition-all ease-in-out`}
+          style={{ backgroundImage: `url('${imageUrl}')` }}
+        >
+          <div className="flex justify-between">
+            <div>
+              <h2 className="text-lg font-medium dark:text-white">{name}</h2>
+              <p className="text-sm text-zinc-500 dark:text-zinc-300">
+                {description}
+              </p>
+            </div>
+            <div className="flex items-center justify-center w-12 h-12 bg-white rounded-full cursor-pointer">
+              <Arrow className="w-6 h-6" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
