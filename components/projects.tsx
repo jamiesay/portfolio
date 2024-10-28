@@ -2,37 +2,54 @@ import ProjectPreview from "./ui/project-preview";
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="grid grid-cols-1 lg:grid-cols-2 my-4 gap-4"
-    >
+    <section id="projects" className="flex flex-col space-y-8 my-4">
       <ProjectPreview
-        name="Flip App"
-        description="Next-gen social media"
-        imageUrl="/assets/project-1.png"
-        bgColor="#685cdd"
-        dark
-        link="/projects/flip-app"
+        name="Favor"
+        description={{
+          summary: "Favor is a bartering app for college students, designed to create a platform for exchanging goods and services within campus communities. As the founder, I led the design and development process, from concept to launch. My goal was to enable a user-friendly and efficient bartering experience tailored for college students' needs.\n\nThrough extensive research, I conducted over 300 surveys to understand the market and identify essential features, which informed the app's design and boosted engagement by 32%.\n\nFavor will focus on expanding features, enhancing the UI/UX, and exploring partnerships to scale across campuses.",
+          details: {
+            date: "2023 - Present",
+            role: "Product Designer & Founder",
+            overview: "Full-stack Development & Design"
+          }
+        }}
+        imageUrl="/assets/another.png"
+        bgColor="#F1F1F1"
+        nameClassName="text-2xl md:text-4xl lg:text-4xl"
       />
       <ProjectPreview
-        name="Moneyscape"
-        description="Lend and borrow dashboard"
-        imageUrl="/assets/project-2.png"
-        bgColor="#313442"
-        dark
-        link="/projects/moneyscape"
+        name="Discord"
+        description={{
+          summary: "In my role with Discord, I aimed to enhance collegiate engagement through a user-centered approach. By conducting 32 interviews and surveying over 300 students, I gathered insights into the unique needs of college users and pinpointed seven key pain points. Using this feedback, I prioritized 10+ feature recommendations and designed engagement strategies through MOSCOW analysis, ensuring relevance and appeal.\n\nI also analyzed 15 competitor apps, drawing inspiration for features tailored to the college experience. These enhancements focused on fostering a welcoming environment on Discord, building long-term loyalty among college students.",
+          details: {
+            date: "2023 - Present",
+            role: "Product Designer & Developer",
+            overview: "Full-stack Development"
+          }
+        }}
+        imageUrl="/assets/newdiscord.png"
+        bgColor="#F1F1F1"
+        rightAligned={true}
+        nameClassName="text-2xl md:text-3xl lg:text-4xl"
       />
       <ProjectPreview
         name="Admin Onboarding"
-        description="Increase user engagement"
-        imageUrl="/assets/project-3.png"
-        link="/projects/admin-onboarding"
+        description={{
+          summary: "Next gen bartering app for college students. A platform designed to revolutionize how students exchange goods and services on campus.",
+          details: {
+            date: "2023 - Present",
+            role: "Product Designer & Developer",
+            overview: "Full-stack Development"
+          }
+        }}
+        imageUrl="/assets/Frame 6.png"
+        bgColor="#F1F1F1"
+        nameClassName="text-2xl md:text-4xl lg:text-4xl"
       />
-      <ProjectPreview
+      {/* <ProjectPreview
         name="Craftwork"
         description="Design resources that will boost your creative workflow"
         imageUrl="/assets/project-6.png"
-        link="/projects/craftwork"
       />
       <ProjectPreview
         name="Newsy App"
@@ -40,14 +57,12 @@ const Projects = () => {
         imageUrl="/assets/project-4.png"
         bgColor="#171717"
         dark
-        link="/projects/newsy-app"
       />
       <ProjectPreview
         name="Krypto"
         description="Analyze crypto currency"
-        imageUrl="/assets/project-5.png"
-        link="/projects/krypto"
-      />
+        imageUrl="/assets/project-5.png" */}
+      {/* >/ */}
     </section>
   );
 };

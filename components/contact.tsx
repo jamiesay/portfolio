@@ -9,7 +9,7 @@ const Contact = () => {
       <h2 className="text-[3.5rem]  mb-8">Have a project in mind?</h2>
 
       <Link
-        href="mailto:rachelmacdermott.com"
+        href="mailto:jamie.say@berkeley.edu"
         className="text-[2.5rem] text-white bg-[#ff5e1a] py-[1.5rem] px-[2rem] font-semibold rounded-full"
       >
         hello@rachelmacdermott.com

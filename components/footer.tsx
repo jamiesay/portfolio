@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="flex items-center gap-[1ch]">
         <div className="w-5 h-5 bg-[#ff5e1a] rounded-full" />
         <Link href="/" className="font-medium">
-          Rachel McDermott.
+           Jamie Say.
         </Link>
       </div>
 
