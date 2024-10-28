@@ -5,6 +5,7 @@ import Link from "next/link";
 import Arrow from "@/public/assets/icons/arrow.svg";
 
 interface Description {
+  subtitle: string;
   summary: string;
   details: {
     date: string;
@@ -66,21 +67,24 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
       >
         <div className={`flex ${rightAligned ? 'justify-end' : 'justify-start'} items-start`}>
           <div className={`max-w-[50%] ${rightAligned ? 'text-right' : 'text-left'}`}>
-            <h3 className={`font-bold ${nameClassName || ''}`}>{name}</h3>
+            <h3 className={`font-bold mb-2 ${nameClassName || ''}`}>{name}</h3>
+            <p className="text-base text-zinc-700 dark:text-zinc-200 mb-3 font-bold italic">
+              {description.subtitle}
+            </p>
             <p className="text-sm text-zinc-500 dark:text-zinc-300 mb-4">
               {description.summary}
             </p>
-            <div className="grid grid-cols-3 gap-4 text-xs">
+            <div className="grid grid-cols-3 gap-4 text-xs" key={name}>
               <div>
-                <span className="font-medium">Date</span><br />
+                <span className="font-bold">Date</span><br />
                 {description.details.date}
               </div>
               <div>
-                <span className="font-medium">Role</span><br />
+                <span className="font-bold">Role</span><br />
                 {description.details.role}
               </div>
               <div>
-                <span className="font-medium">Overview</span><br />
+                <span className="font-bold">Overview</span><br />
                 {description.details.overview}
               </div>
             </div>
