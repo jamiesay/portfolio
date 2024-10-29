@@ -6,16 +6,16 @@ export const metadata: Metadata = {
   description: 'Next-gen social media project',
 };
 
-export default function FlipAppProject() {
+export default function FavorProject() {
   return (
     <>
       <Navbar showLinks={false} />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4">Flip App</h1>
-        <p className="text-xl mb-4">Next-gen social media</p>
+        <h1 className="text-4xl font-bold mb-4">Favor</h1>
+        <p className="text-xl mb-4">Bartering platform for students</p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">
-          <img src="/assets/project-1.png" alt="Flip App" className="max-w-2xl w-full" />
+          <img src="/assets/project-1.png" alt="Favor" className="max-w-2xl w-full" />
         </div>
         {/* Three-column section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">

@@ -25,20 +25,9 @@ const Hero = () => {
             My Resume
           </Link>
           <div className="flex items-center gap-4">
-            {/* <SocialButton bgColor="dribbble">
-              <Dribbble className="w-5 h-5" />
-            </SocialButton> */}
-            {/* <SocialButton bgColor="instagram">
-              <Instagram className="w-5 h-5" />
-            </SocialButton> */}
-            <Link href="https://www.linkedin.com/in/jamie-say/" target="_blank" rel="noopener noreferrer">
-              <SocialButton bgColor="linkedin">
-                <Linkedin className="w-5 h-5" />
-              </SocialButton>
-            </Link>
-            {/* <SocialButton bgColor="twitter">
-              <Twitter className="w-5 h-5" />
-            </SocialButton> */}
+            <SocialButton href="https://www.linkedin.com/in/jamie-say/" bgColor="linkedin">
+              <Linkedin className="w-5 h-5" />
+            </SocialButton>
           </div>
         </div>
       </div>

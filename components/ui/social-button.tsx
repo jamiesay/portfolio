@@ -4,11 +4,13 @@ import * as React from "react";
 interface SocialButtonProps {
   children: React.ReactNode;
   bgColor?: string | undefined;
+  href?: string;
 }
 
 const SocialButton: React.FC<SocialButtonProps> = ({
   children,
   bgColor = "black",
+  href = "#",
 }) => {
   let bgHoverColor;
 
@@ -29,13 +31,21 @@ const SocialButton: React.FC<SocialButtonProps> = ({
       bgHoverColor = "hover:bg-black";
       break;
   }
-  return (
-    <Link
-      href="#"
+
+  const buttonContent = (
+    <div
       className={`group h-12 w-12 bg-white ${bgHoverColor} rounded-full transition-colors duration-200 ease-in-out flex justify-center items-center`}
     >
       {children}
+    </div>
+  );
+
+  return href ? (
+    <Link href={href}>
+      {buttonContent}
     </Link>
+  ) : (
+    buttonContent
   );
 };
 
