@@ -19,8 +19,10 @@ const Hero = () => {
         </p>
         <div className="flex flex-col items-center gap-6 lg:flex-row justify-self-end">
           <Link
-            href="/"
+            href="https://drive.google.com/file/d/1Cd1Inzpc6CHAioSJzszlR1RWXr6xU5ny/view?usp=sharing"
             className="px-12 py-3 font-medium text-white bg-[#ff5e1a] rounded-full w-60 lg:w-auto"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             My Resume
           </Link>

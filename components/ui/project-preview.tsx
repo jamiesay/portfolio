@@ -29,6 +29,7 @@ interface ProjectPreviewProps {
     top?: string;
     horizontal?: string;
   };
+  imageHeight?: string;
 }
 
 const PreviewAnimation = {
@@ -60,6 +61,7 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   rightAligned = false,
   descriptionClassName,
   imageOffset = {},
+  imageHeight = '100%',
 }) => {
   const Content = (
     <div
@@ -121,7 +123,8 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
           <img 
             src={imageUrl}
             alt={name}
-            className="h-full w-auto object-contain"
+            style={{ height: imageHeight }}
+            className="w-auto object-contain"
           />
         </div>
       </div>

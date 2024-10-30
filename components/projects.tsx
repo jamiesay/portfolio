@@ -25,12 +25,13 @@ const Projects = () => {
             overview: "Full-stack Development"
           }
         }}
-        imageUrl="/assets/favor_phone.png"
+        imageUrl="/assets/favor_phone2.png"
         imageOffset={{
           top: '0px',
           horizontal: '110px'  // Moves 30px inward from the aligned side
         }}
-        rightAligned={false}
+        imageHeight="300px"
+        rightAligned={true}
         nameClassName="text-lg sm:text-xl md:text-2xl lg:text-4xl"
         descriptionClassName="hidden sm:block"
         link="/projects/favor"
@@ -46,12 +47,13 @@ const Projects = () => {
             overview: "Full-stack Development"
           }
         }}
-        imageUrl="/assets/favor_phone.png"
+        imageUrl="/assets/discord_phone2.png"
         imageOffset={{
           top: '0px',
-          horizontal: '110px'  // Moves 30px inward from the aligned side
+          horizontal: '30px'  // Moves 30px inward from the aligned side
         }}
-        rightAligned={true}
+        imageHeight="280px"  // Add this line to control the image height
+        rightAligned={false}
         nameClassName="text-2xl md:text-3xl lg:text-4xl"
         link="/projects/discord"
       />
@@ -66,12 +68,13 @@ const Projects = () => {
             overview: "Full-stack Development"
           }
         }}
-        imageUrl="/assets/favor_phone.png"
+        imageUrl="/assets/snapchat_comp.png"
         imageOffset={{
           top: '0px',
-          horizontal: '110px'  // Moves 30px inward from the aligned side
+          horizontal: '30px'  // Moves 30px inward from the aligned side
         }}
-        rightAligned={false}
+        imageHeight="300px"
+        rightAligned={true}
         nameClassName="text-2xl md:text-4xl lg:text-4xl"
         link="/projects/snapchat"
       />
