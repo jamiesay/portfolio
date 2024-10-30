@@ -25,6 +25,10 @@ interface ProjectPreviewProps {
   className?: string;
   rightAligned?: boolean;
   descriptionClassName?: string;
+  imageOffset?: {
+    top?: string;
+    horizontal?: string;
+  };
 }
 
 const PreviewAnimation = {
@@ -48,53 +52,77 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
   name,
   description,
   imageUrl,
-  bgColor,
+  bgColor = 'bg-slate-100',
   dark,
   link,
   nameClassName,
   className,
   rightAligned = false,
   descriptionClassName,
+  imageOffset = {},
 }) => {
   const Content = (
     <div
       className={`relative h-[400px] sm:h-[400px] w-full overflow-hidden rounded-3xl p-6 ${
         dark ? 'text-white' : ''
-      }`}
-      style={{ backgroundColor: bgColor }}
+      } ${bgColor}`}
     >
-      <h3 className={`font-bold mb-2 block sm:hidden ${nameClassName || ''}`}>{name}</h3>
+      {/* Mobile Title */}
+      <h3 className={`font-bold mb-4 block sm:hidden ${nameClassName || ''}`}>{name}</h3>
       
-      <div
-        className={`h-full w-full px-10 py-6 duration-[500ms] hover:scale-105 bg-cover bg-no-repeat bg-center transition-all ease-in-out`}
-        style={{ backgroundImage: `url('${imageUrl}')` }}
-      >
-        <div className={`flex ${rightAligned ? 'justify-end' : 'justify-start'} items-start`}>
-          <div className={`max-w-full sm:max-w-[50%] ${rightAligned ? 'text-right' : 'text-left'}`}>
-            <h3 className={`font-bold mb-2 hidden sm:block ${nameClassName || ''}`}>{name}</h3>
-            <div className="hidden sm:block">
-              <p className="text-base text-zinc-700 dark:text-zinc-200 mb-3 font-bold italic">
-                {description.subtitle}
-              </p>
-              <p className="text-sm text-zinc-500 dark:text-zinc-300 mb-4">
-                {description.summary}
-              </p>
-              <div className="grid grid-cols-3 gap-4 text-xs" key={name}>
-                <div>
-                  <span className="font-bold">Date</span><br />
-                  {description.details.date}
-                </div>
-                <div>
-                  <span className="font-bold">Role</span><br />
-                  {description.details.role}
-                </div>
-                <div>
-                  <span className="font-bold">Overview</span><br />
-                  {description.details.overview}
-                </div>
+      {/* Mobile Image */}
+      <div className="sm:hidden h-[calc(100%-3rem)] w-full flex justify-center items-center">
+        <img 
+          src={imageUrl}
+          alt={name}
+          className="h-full w-auto object-contain"
+        />
+      </div>
+
+      {/* Desktop Layout */}
+      <div className="hidden sm:flex h-full w-full px-10 py-6 justify-between items-center relative">
+        {/* Text Content */}
+        <div className={`w-[45%] ${rightAligned ? 'ml-auto' : 'mr-auto'}`}>
+          <h3 className={`font-bold mb-2 ${nameClassName || ''}`}>{name}</h3>
+          <div>
+            <p className="text-base text-zinc-700 dark:text-zinc-200 mb-3 font-bold italic">
+              {description.subtitle}
+            </p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-300 mb-4">
+              {description.summary}
+            </p>
+            <div className="grid grid-cols-3 gap-4 text-xs">
+              <div>
+                <span className="font-bold">Date</span><br />
+                {description.details.date}
+              </div>
+              <div>
+                <span className="font-bold">Role</span><br />
+                {description.details.role}
+              </div>
+              <div>
+                <span className="font-bold">Overview</span><br />
+                {description.details.overview}
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Desktop Image */}
+        <div 
+          className={`absolute h-full flex items-center ${
+            rightAligned ? 'left-10' : 'right-10'
+          }`}
+          style={{
+            top: imageOffset.top || '0',
+            [rightAligned ? 'left' : 'right']: imageOffset.horizontal || '10px',
+          }}
+        >
+          <img 
+            src={imageUrl}
+            alt={name}
+            className="h-full w-auto object-contain"
+          />
         </div>
       </div>
     </div>

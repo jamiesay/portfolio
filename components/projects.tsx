@@ -25,8 +25,12 @@ const Projects = () => {
             overview: "Full-stack Development"
           }
         }}
-        imageUrl="/assets/another.png"
-        bgColor="#F1F1F1"
+        imageUrl="/assets/favor_phone.png"
+        imageOffset={{
+          top: '0px',
+          horizontal: '110px'  // Moves 30px inward from the aligned side
+        }}
+        rightAligned={false}
         nameClassName="text-lg sm:text-xl md:text-2xl lg:text-4xl"
         descriptionClassName="hidden sm:block"
         link="/projects/favor"
@@ -42,8 +46,11 @@ const Projects = () => {
             overview: "Full-stack Development"
           }
         }}
-        imageUrl="/assets/newdiscord.png"
-        bgColor="#F1F1F1"
+        imageUrl="/assets/favor_phone.png"
+        imageOffset={{
+          top: '0px',
+          horizontal: '110px'  // Moves 30px inward from the aligned side
+        }}
         rightAligned={true}
         nameClassName="text-2xl md:text-3xl lg:text-4xl"
         link="/projects/discord"
@@ -59,8 +66,12 @@ const Projects = () => {
             overview: "Full-stack Development"
           }
         }}
-        imageUrl="/assets/Frame 6.png"
-        bgColor="#F1F1F1"
+        imageUrl="/assets/favor_phone.png"
+        imageOffset={{
+          top: '0px',
+          horizontal: '110px'  // Moves 30px inward from the aligned side
+        }}
+        rightAligned={false}
         nameClassName="text-2xl md:text-4xl lg:text-4xl"
         link="/projects/snapchat"
       />
