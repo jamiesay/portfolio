@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="flex flex-col gap-18 lg:gap-02 bg-[url('/assets/gradient-bg.jpg')] bg-cover bg-zinc-200 h-[30rem] rounded-3xl p-10">
         {/* <div className="flex flex-col justify-center md:w-1/2"> */}
         <h1 className="text-6xl font-semibold">
-          Hi, I'm Jamie Say
+          Hi, I&apos;m Jamie Say
         </h1>
         <p className="flex-1 font-medium italic w-auto text-gray-500 text-xl mt-4">
           a Computer Science student who is passionate about product design and development that innovates and excites new human interactions.
