@@ -57,14 +57,25 @@ export default function FavorProject() {
           </div>
           <div>
             <h2 className="text-2xl font-semibold mb-2">Solution</h2>
-            <p>We developed a unique algorithm that prioritizes meaningful interactions and promotes diverse content discovery, addressing common issues in traditional social media.</p>
+            <p>
+              <strong>Enhanced Onboarding Process:</strong> Introduced an onboarding flow designed to familiarize new users with Favor's core features quickly and intuitively, emphasizing the ease of listing requests and offers. This included a simplified, visually engaging step-by-step guide for new users to list their first favor or browse existing offers.<br/ >
+              <strong>Interactive Tutorial on Posting and Searching for Favors:</strong> Added interactive tooltips and prompts to help users explore how to post, search, and respond to favors, highlighting popular and community-centric exchanges like tutoring and study material sharing.<br />
+              <strong>In-App Gamification to Boost Engagement:</strong> Designed a reward system that incentivizes users to complete various actions, such as listing or completing their first favor, to build early engagement and establish a habit of activity on the platform.<br />
+              <strong>Improved UI for Service Discovery:</strong> Optimized the interface to make browsing and searching for services more intuitive, ensuring that users could quickly connect with peers needing similar services.<br />
+              <strong>Backend Enhancements for Real-Time Updates:</strong> Built and integrated real-time notifications for responses to posted favors, helping users stay engaged and respond promptly, enhancing user interaction and satisfaction.</p>
           </div>
           <div>
             <h2 className="text-2xl font-semibold mb-2">Result</h2>
-            <p>Flip App has gained over 1 million active users within its first year, with engagement rates 3x higher than industry averages and a 95% user satisfaction rate.</p>
+            <p>The introduction of these solutions yielded significant improvements in engagement metrics:<br/ >
+            <br />
+            <strong>32% Increase in Active Engagement:</strong> The percentage of active users increased by 32% post-launch, with more users posting and completing favors.<br/ >
+            <strong>Improved Feature Discoverability:</strong> Feedback indicated that the interactive tutorial and onboarding flow helped users understand and use core features, reducing the learning curve.<br/ >
+            <strong>Positive User Feedback on Usability:</strong> Surveyed users reported higher satisfaction with Favor’s ease of use and accessibility, noting that they were more likely to recommend it to peers due to its simplicity and utility.<br/ >
+            <br />
+            <strong>These changes helped position Favor as a compelling, community-oriented platform that made peer exchanges easy and accessible, leading to higher user satisfaction and activity.</strong></p>
           </div>
         </div>
-        <p className="mb-4">Detailed information about the Flip App project...</p>
+        {/* <p className="mb-4">Detailed information about the Flip App project...</p> */}
       </main>
     </>
   );
