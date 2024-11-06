@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Navbar from '@/components/navbar';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 
 export const metadata: Metadata = {
@@ -36,7 +38,13 @@ export default function FavorProject() {
         <p className="text-l italic mb-4">Favor is a bartering app designed specifically for college students to exchange services and goods within their campus community. Improving peer-to-peer exchange efficiency and promoting a sense of community engagement were primary goals from the outset. Favor's unique approach centers on a streamlined, user-friendly interface tailored to student needs, making it easy to request and offer services on a flexible basis.</p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">
-          <img src="/assets/favor_phone2.png" alt="Favor" className="max-w-sm w-full" />
+          <Image
+              src="/assets/favor_phone2.png"
+              alt="Snapchat"
+              width={768}  // adjust these values based on your image size
+              height={576} // adjust these values based on your image size
+              className="max-w-sm w-full"
+        />
         </div>
          {/* Five-column section */}
          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">

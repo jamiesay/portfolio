@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import Navbar from '@/components/navbar';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 
 export const metadata: Metadata = {
@@ -36,7 +38,13 @@ export default function FavorProject() {
         </p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">
-          <img src="/assets/snapchat_comp.png" alt="Snapchat" className="max-w-sm w-full" />
+          <Image
+              src="/assets/snapchat_comp.png"
+              alt="Snapchat"
+              width={768}  // adjust these values based on your image size
+              height={576} // adjust these values based on your image size
+              className="max-w-sm w-full"
+        />
         </div>
          {/* Five-column section */}
          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
