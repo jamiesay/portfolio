@@ -15,7 +15,7 @@ export default function FavorProject() {
         <p className="text-xl mb-4">Bartering platform for students</p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">
-          <img src="/assets/project-1.png" alt="Favor" className="max-w-2xl w-full" />
+          <img src="/assets/favor_phone2.png" alt="Favor" className="max-w-sm w-full" />
         </div>
         {/* Three-column section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
