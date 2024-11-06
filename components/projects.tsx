@@ -20,8 +20,8 @@ const Projects = () => {
           subtitle: "Bartering platform for students",
           summary: "I founded and led the primary development of Favor, a bartering app targeted at college students. I took the main role in conducting user resarch and validation.",
           details: {
-            date: "2023 - Present",
-            role: "Product Designer & Developer",
+            date: "July 2024 - Present",
+            role: "Product Designer & Founder",
             overview: "Full-stack Development"
           }
         }}
