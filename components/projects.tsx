@@ -12,6 +12,7 @@ interface Description {
 }
 
 const Projects = () => {
+  
   return (
     <section id="projects" className="flex flex-col space-y-4 sm:space-y-8 my-2 sm:my-4 px-4 sm:px-0">
       <ProjectPreview
@@ -42,9 +43,9 @@ const Projects = () => {
           subtitle: "Increasing intuition for all types of users",
           summary: "I led the research and design behind Discord's beta mobile app, focusing on increasing user intuition and maximizing user interaction with 8 new features.",
           details: {
-            date: "2023 - Present",
-            role: "Product Designer & Developer",
-            overview: "Full-stack Development"
+            date: "Jan 2023 - May 2023",
+            role: "Contract Design Consultant",
+            overview: "Product Design & Development"
           }
         }}
         imageUrl="/assets/discord_phone2.png"
@@ -63,9 +64,9 @@ const Projects = () => {
           subtitle: "Streamlining onboarding process for new admins",
           summary: "I gamified and digitized the DEI onboarding process for all Snapchat employees globally. The new three stage process increases employee engagement by 30%.",
           details: {
-            date: "2023 - Present",
-            role: "Product Designer & Developer",
-            overview: "Full-stack Development"
+            date: " Aug 2023 - Jan 2024",
+            role: "Contract Design Consultant",
+            overview: "Product Development"
           }
         }}
         imageUrl="/assets/snapchat_comp.png"

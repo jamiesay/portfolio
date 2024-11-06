@@ -15,7 +15,7 @@ const Navbar = ({ showLinks = true }: NavbarProps) => {
       </div>
       {showLinks && (
         <div className="hidden lg:flex gap-12 text-md text-zinc-400">
-          <Link
+          {/* <Link
             href="#about"
             className="hover:text-[#ff5e1a] active:text-black font-medium"
           >
@@ -26,7 +26,7 @@ const Navbar = ({ showLinks = true }: NavbarProps) => {
           </Link>
           <Link href="#contact" className="hover:text-[#ff5e1a] font-medium">
             Contact
-          </Link>
+          </Link> */}
         </div>
       )}
     </nav>

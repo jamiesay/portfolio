@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Navbar from '@/components/navbar';
+import Link from 'next/link';
+
 
 export const metadata: Metadata = {
   title: 'Flip App Project',
@@ -11,7 +13,26 @@ export default function FavorProject() {
     <>
       <Navbar showLinks={false} />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4">Favor</h1>
+
+        <div className="flex items-center gap-4 mb-4">
+          <Link 
+            href="/" 
+            className="inline-flex items-center text-gray-600 hover:text-gray-900"
+          >
+            <svg 
+              className="w-5 h-5" 
+              fill="none" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+          </Link>
+          <h1 className="text-4xl font-bold">Favor</h1>
+        </div>
         <p className="text-l italic mb-4">Favor is a bartering app designed specifically for college students to exchange services and goods within their campus community. Improving peer-to-peer exchange efficiency and promoting a sense of community engagement were primary goals from the outset. Favor's unique approach centers on a streamlined, user-friendly interface tailored to student needs, making it easy to request and offer services on a flexible basis.</p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Navbar from '@/components/navbar';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Flip App Project',
@@ -11,7 +12,25 @@ export default function FavorProject() {
     <>
        <Navbar showLinks={false} />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-4">Discord</h1>
+      <div className="flex items-center gap-4 mb-4">
+          <Link 
+            href="/" 
+            className="inline-flex items-center text-gray-600 hover:text-gray-900"
+          >
+            <svg 
+              className="w-5 h-5" 
+              fill="none" 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth="2" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+          </Link>
+          <h1 className="text-4xl font-bold">Discord</h1>
+        </div>
         <p className="text-l italic mb-4">With the launch of their new beta version of their mobile app, Discord needed to ensure their new features maintained intuition and increased college student engagement. Analyzing each interactive feature on impact and usability, I led the redesign and key recommendations that influenced features in Discord’s most recent mobile application update.</p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">
@@ -32,12 +51,12 @@ export default function FavorProject() {
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-2">Team</h3>
             <hr className="my-2 border-gray-200" />
-            <p className="text-sm">Business Lead<br/ >Marketing Lead<br/>Financial Manager</p>
+            <p className="text-sm">Berkeley Business Society<br/ >2 Project Managers<br/>5 Consultants</p>
           </div>
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-2">Skills</h3>
             <hr className="my-2 border-gray-200" />
-            <p className="text-sm">Product Design<br />User Research<br />Visual Design</p>
+            <p className="text-sm">Product Design<br />User Research<br />MOSCOW Analysis<br />Prototyping</p>
           </div>
           <div className="text-center">
             <h3 className="text-lg font-semibold mb-2">Tools</h3>
