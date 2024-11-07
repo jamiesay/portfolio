@@ -1,6 +1,7 @@
 import * as React from "react";
 import { motion, useScroll } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 import Arrow from "@/public/assets/icons/arrow.svg";
 
@@ -74,11 +75,15 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
       
       {/* Mobile Image */}
       <div className="sm:hidden h-[calc(100%-3rem)] w-full flex justify-center items-center">
-        <img 
-          src={imageUrl}
-          alt={name}
-          className="h-full w-auto object-contain"
-        />
+        <div className="relative" style={{ height: imageHeight, width: '100%', maxWidth: '300px' }}>
+          <Image 
+            src={imageUrl}
+            alt={name}
+            fill
+            className="object-contain"
+            sizes="(max-width: 640px) 100vw, 50vw"
+          />
+        </div>
       </div>
 
       {/* Desktop Layout */}
@@ -120,12 +125,21 @@ const ProjectPreview: React.FC<ProjectPreviewProps> = ({
             [rightAligned ? 'left' : 'right']: imageOffset.horizontal || '10px',
           }}
         >
-          <img 
-            src={imageUrl}
-            alt={name}
-            style={{ height: imageHeight }}
-            className="w-auto object-contain"
-          />
+          <div 
+            className="relative" 
+            style={{ 
+              height: imageHeight, 
+              width: '300px' // You can adjust this value based on your needs
+            }}
+          >
+            <Image 
+              src={imageUrl}
+              alt={name}
+              fill
+              className="object-contain"
+              sizes="(max-width: 1024px) 50vw, 33vw"
+            />
+          </div>
         </div>
       </div>
     </div>

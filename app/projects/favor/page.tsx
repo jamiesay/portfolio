@@ -35,7 +35,7 @@ export default function FavorProject() {
           </Link>
           <h1 className="text-4xl font-bold">Favor</h1>
         </div>
-        <p className="text-l italic mb-4">Favor is a bartering app designed specifically for college students to exchange services and goods within their campus community. Improving peer-to-peer exchange efficiency and promoting a sense of community engagement were primary goals from the outset. Favor's unique approach centers on a streamlined, user-friendly interface tailored to student needs, making it easy to request and offer services on a flexible basis.</p>
+        <p className="text-l italic mb-4">Favor is a bartering app designed specifically for college students to exchange services and goods within their campus community. Improving peer-to-peer exchange efficiency and promoting a sense of community engagement were primary goals from the outset. Favor&apos;s unique approach centers on a streamlined, user-friendly interface tailored to student needs, making it easy to request and offer services on a flexible basis.</p>
         {/* Center the image */}
         <div className="flex justify-center mb-8">
           <Image
@@ -87,7 +87,7 @@ export default function FavorProject() {
           <div>
             <h2 className="text-2xl font-semibold mb-2">Solution</h2>
             <p>
-              <strong>Enhanced Onboarding Process:</strong> Introduced an onboarding flow designed to familiarize new users with Favor's core features quickly and intuitively, emphasizing the ease of listing requests and offers. This included a simplified, visually engaging step-by-step guide for new users to list their first favor or browse existing offers.<br/ >
+              <strong>Enhanced Onboarding Process:</strong> Introduced an onboarding flow designed to familiarize new users with Favor&apos;s core features quickly and intuitively, emphasizing the ease of listing requests and offers. This included a simplified, visually engaging step-by-step guide for new users to list their first favor or browse existing offers.<br/ >
               <strong>Interactive Tutorial on Posting and Searching for Favors:</strong> Added interactive tooltips and prompts to help users explore how to post, search, and respond to favors, highlighting popular and community-centric exchanges like tutoring and study material sharing.<br />
               <strong>In-App Gamification to Boost Engagement:</strong> Designed a reward system that incentivizes users to complete various actions, such as listing or completing their first favor, to build early engagement and establish a habit of activity on the platform.<br />
               <strong>Improved UI for Service Discovery:</strong> Optimized the interface to make browsing and searching for services more intuitive, ensuring that users could quickly connect with peers needing similar services.<br />
@@ -99,7 +99,7 @@ export default function FavorProject() {
             <br />
             <strong>32% Increase in Active Engagement:</strong> The percentage of active users increased by 32% post-launch, with more users posting and completing favors.<br/ >
             <strong>Improved Feature Discoverability:</strong> Feedback indicated that the interactive tutorial and onboarding flow helped users understand and use core features, reducing the learning curve.<br/ >
-            <strong>Positive User Feedback on Usability:</strong> Surveyed users reported higher satisfaction with Favor’s ease of use and accessibility, noting that they were more likely to recommend it to peers due to its simplicity and utility.<br/ >
+            <strong>Positive User Feedback on Usability:</strong> Surveyed users reported higher satisfaction with Favor&apos;s ease of use and accessibility, noting that they were more likely to recommend it to peers due to its simplicity and utility.<br/ >
             <br />
             <strong>These changes helped position Favor as a compelling, community-oriented platform that made peer exchanges easy and accessible, leading to higher user satisfaction and activity.</strong></p>
           </div>
